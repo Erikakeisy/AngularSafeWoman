@@ -1,0 +1,52 @@
+<mat-drawer-container class="container" autosize>
+    <mat-drawer #drawer class="sidenav" mode="side">
+      <img src="assets/img/Component 1.png" alt="Imagem Navegação">
+        <mat-nav-list class="nav-list">
+            <a mat-list-item routerLink="home">
+                <i class="material-icons">home</i>
+                Inicio
+            </a>
+            <a mat-list-item routerLink="/">
+              <i class="material-icons">account_circle</i>
+              Minha Conta
+            </a>
+            <a mat-list-item routerLink="meusrelatos">
+              <i class="material-icons">record_voice_over</i>
+              Meus Relatos
+            </a>
+            <a mat-list-item routerLink="/">
+              <i class="material-icons">report_problem</i>
+              Alertas
+            </a>
+            <a mat-list-item routerLink="telefones">
+              <i class="material-icons">settings_phone</i>
+              Telefones
+            </a>
+            <a mat-list-item routerLink="mapa">
+              <i class="material-icons">location_on</i>
+              Mapa
+            </a>
+            <a mat-list-item routerLink="relatos">
+              <i class="material-icons"> forum</i>
+              Relatos
+            </a>
+            <a mat-list-item href="https://linktr.ee/safewoman">
+              <i class="material-icons">alternate_email</i>
+              Redes Sociais
+            </a>
+            <a mat-list-item routerLink="/">
+              <i class="material-icons">logout</i>
+              Sair
+            </a>
+        </mat-nav-list>
+    </mat-drawer>
+  
+    <div class="sidenav-content">
+      <app-headers></app-headers>
+      <button class="menu mat-elevation-z8" (click)="drawer.toggle()" mat-icon-button>
+        <mat-icon>menu</mat-icon>
+      </button>
+      <router-outlet></router-outlet>
+    </div>
+  
+  </mat-drawer-container>

@@ -1,0 +1,27 @@
+.container{
+    width: 40rem;
+    margin: auto;
+    padding: 1rem 1rem 3rem 1rem;
+    border-radius:.6em ;
+}
+.fullwidth{
+    width: 100%;
+}
+h1{
+    text-align: center;
+}
+img{
+    height:15rem;
+    margin: auto;
+}
+button{
+    margin-top: .5rem;
+}
+.button1{
+    background-color:  rgb(173, 78, 129); ;
+    width: 100%;
+}
+.button2{
+    background-color:  rgb(142, 126, 134); ;
+    width: 100%;
+}

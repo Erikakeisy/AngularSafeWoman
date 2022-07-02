@@ -1,0 +1,120 @@
+<div class="container mat-elevation-z8">
+    <form action="" class="form">
+        <h1 class="fullwidth">Criar Relato</h1>
+        <!-- <img class="fullwidth" src="assets/img/Component 1.png" alt=""> -->
+   
+    <p>
+        <mat-form-field class="fullwidth"appearance="legacy">
+          <mat-label>Cidade</mat-label>
+          <input 
+          [formControl]="city"
+          required
+          matInput placeholder="Cidade">
+          <mat-icon matSuffix>business</mat-icon>
+        </mat-form-field>
+      </p>
+      
+      <p>
+        <mat-form-field class="fullwidth"appearance="legacy">
+          <mat-label>Estado</mat-label>
+          <input
+          [formControl]="state"
+          required
+          matInput placeholder="Estado">
+          <mat-icon matSuffix>location_on</mat-icon>
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field class="fullwidth"appearance="legacy">
+          <mat-label>Rua</mat-label>
+          <input
+          [formControl]="street"
+          required 
+          matInput placeholder="Rua">
+          <mat-icon matSuffix>location_on</mat-icon>
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field class="fullwidth"appearance="legacy">
+          <mat-label>Bairro</mat-label>
+          <input
+          [formControl]="street"
+          required 
+          matInput placeholder="neighborhood">
+          <mat-icon matSuffix>location_on</mat-icon>
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field class="fullwidth"appearance="legacy">
+          <mat-label>Horario</mat-label>
+          <input
+          matInput placeholder="Ex: 13:30">
+          <mat-icon matSuffix>watch_later</mat-icon>
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field class="fullwidth"appearance="legacy">
+          <mat-label>Tipo de Ofensa</mat-label>
+          <input
+          [formControl]="offenseType"
+          required 
+          matInput placeholder="Ex:Assedio, Agressao, Roubo...">
+          <mat-icon matSuffix>record_voice_over</mat-icon>
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field class="fullwidth"appearance="legacy">
+          <mat-label>Estava Sozinha?</mat-label>
+          <input
+          [formControl]="alone"
+          required 
+          matInput placeholder="Ex:Nao, estava com minha amiga">
+          <mat-icon matSuffix>supervisor_account</mat-icon>
+        </mat-form-field>
+      </p>
+
+      <mat-form-field class="fullwidth" appearance="fill">
+        <mat-label>Foi chamado a policia?</mat-label>
+        <mat-select>
+          <mat-option value="one">Sim</mat-option>
+          <mat-option value="two">Nao</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="fullwidth" appearance="fill">
+        <mat-label>Se sim, fooi resolvido?</mat-label>
+        <mat-select>
+          <mat-option value="one">Sim</mat-option>
+          <mat-option value="two">Nao</mat-option>
+          <mat-option value="two">Nao foi chamado</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <p>
+        <mat-form-field class="fullwidth"appearance="legacy">
+          <mat-label>Detalhe do suspeito</mat-label>
+          <input 
+          [formControl]="suspectParticulars"
+          required 
+          matInput placeholder="Detalhe do suspeito">
+          <mat-icon matSuffix>zoom_in</mat-icon>
+          <mat-hint>Ex:Senhor de camiseta veremelha.</mat-hint>
+        </mat-form-field>
+      </p>
+      <p>
+      <mat-form-field class="fullwidth" appearance="fill">
+        <mat-label>Observações</mat-label>
+        <textarea matInput></textarea>
+        <mat-hint>Ex:Sempre vejo esse senhor no bar dessa rua</mat-hint>
+      </mat-form-field>
+    </p>
+
+    <button [disabled]="!validate()" class="button1 mat-elevation-z4" mat-flat-button color="primary">Criar</button>
+    <button routerLink="../" class="button2 mat-elevation-z4" mat-stroked-button color="primary">Cancelar</button>
+</form>
+</div>

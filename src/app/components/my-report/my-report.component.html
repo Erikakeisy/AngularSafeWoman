@@ -1,0 +1,87 @@
+<div class="container">
+
+    <h1>Meus Relatos</h1>
+  
+    <!-- <button routerLink="criar" class="mat-elevation-z8" mat-stroked-button color="primary">Novo Relato</button> -->
+    <button routerLink="criar" class="button1 mat-elevation-z8" mat-flat-button color="primary">Novo Relato</button>
+    
+        <div class="mat-elevation-z8">
+          <table mat-table [dataSource]="dataSource" matSort>
+            
+            <!-- Progress Column -->
+            <ng-container matColumnDef="date">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Data de Abertura </th>
+              <td mat-cell *matCellDef="let element"> {{element.date}}% </td>
+            </ng-container>
+        
+            <!-- Name Column -->
+            <ng-container matColumnDef="city">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Cidade </th>
+              <td mat-cell *matCellDef="let element"> {{element.city}} </td>
+            </ng-container>
+        
+            <!-- Fruit Column -->
+            <ng-container matColumnDef="state">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Estado </th>
+              <td mat-cell *matCellDef="let element"> {{element.state}} </td>
+            </ng-container>
+  
+            <ng-container matColumnDef="street">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Rua </th>
+              <td mat-cell *matCellDef="let element"> {{element.street}} </td>
+            </ng-container>
+  
+            <ng-container matColumnDef="neighborhood">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Bairro </th>
+              <td mat-cell *matCellDef="let element"> {{element.neighborhood}} </td>
+            </ng-container>
+  
+            <ng-container matColumnDef="hour">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Horario </th>
+              <td mat-cell *matCellDef="let element"> {{element.hour}} </td>
+            </ng-container>
+  
+            <ng-container matColumnDef="dateOffense">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Data </th>
+              <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+            </ng-container>
+  
+            <ng-container matColumnDef="offenseType">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Tipo de Ofensa </th>
+              <td mat-cell *matCellDef="let element"> {{element.offenseType}} </td>
+            </ng-container>
+  
+            <ng-container matColumnDef="alone">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Estava Sozinha </th>
+              <td mat-cell *matCellDef="let element"> {{element.alone}} </td>
+            </ng-container>
+  
+            <ng-container matColumnDef="policeReport">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Foi chamado a policia </th>
+              <td mat-cell *matCellDef="let element"> {{element.policeReport}} </td>
+            </ng-container>
+  
+            <ng-container matColumnDef="policeSolved">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Se sim, foi resolvido </th>
+              <td mat-cell *matCellDef="let element"> {{element.policeSolved}} </td>
+            </ng-container>
+  
+            <ng-container matColumnDef="suspectParticulars">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Detalhes do Suspeito </th>
+              <td mat-cell *matCellDef="let element"> {{element.suspectParticulars}} </td>
+            </ng-container>
+  
+            <ng-container matColumnDef="observation">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Observações </th>
+              <td mat-cell *matCellDef="let element"> {{element.observation}} </td>
+            </ng-container>
+  
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let element; columns: displayedColumns;"></tr> 
+  
+          </table>
+        
+          <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+        </div>
+      
+  </div>
