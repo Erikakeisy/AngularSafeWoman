@@ -9,7 +9,11 @@ export class ReportsService {
 
   constructor(http: HttpClient) { }
 
-  // findAll(): Observable<Reports[]>{
-  //   return this.http.get<Reports[]>(`${API_CONFIG.baseUrl}/reports`);
+  // findAll(){
+  //   return this.http.get('$')
+  // }
+
+  // create(report: ReportsService): Observable<ReportsService>{
+  // return this.http.post<ReportsService[]>(`${API_CONFIG.baseUrl}/reports`, report);
   // }
 }

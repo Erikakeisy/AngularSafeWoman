@@ -34,6 +34,9 @@ import { PhonesComponent } from './components/phones/phones.component';
 import { ReportsCreateComponent } from './components/reports/reports-create/reports-create.component';
 import { MapComponent } from './components/map/map.component';
 import { MyReportComponent } from './components/my-report/my-report.component';
+import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
+import { LoginComponent } from './components/login/login.component';
+import { ToastrModule } from 'ngx-toastr';
 
 
 
@@ -48,6 +51,7 @@ import { MyReportComponent } from './components/my-report/my-report.component';
     ReportsCreateComponent,
     MapComponent,
     MyReportComponent,
+    LoginComponent,
   
   ],
   imports: [
@@ -74,8 +78,13 @@ import { MyReportComponent } from './components/my-report/my-report.component';
     MatIconModule,
     MatListModule,
     MatCardModule,
+    ToastrModule.forRoot({
+    timeOut:4000,
+    closeButton:true,
+    progressBar:true
+    })
   ],
-  providers: [],
+  providers: [AuthInterceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

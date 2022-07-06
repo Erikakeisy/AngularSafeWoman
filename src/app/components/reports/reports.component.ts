@@ -14,7 +14,8 @@ export class ReportsComponent implements OnInit {
   displayedColumns: string[] = ['date', 'city', 'state','street','neighborhood','hour','dateOffense','offenseType','alone','policeReport','policeSolved','suspectParticulars','observation'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
-  constructor() { }
+  constructor(
+  ) { }
 
   ngOnInit(): void {
   }
