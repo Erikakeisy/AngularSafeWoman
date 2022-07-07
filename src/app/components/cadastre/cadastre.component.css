@@ -1,12 +1,13 @@
 .container{
     height: 190%;
-    background-image:url(https://i.imgur.com/kscSzP3.jpg);
+    /* background-image:url(https://i.imgur.com/kscSzP3.jpg); */
+    background:rgb(173, 78, 129) ;
     display: flex;
     align-items: center ;
     justify-content: center;
 }
 .form{
-    width: 45rem;
+    width: 40rem;
     margin: auto;
     background-color: rgb(235,235,235);
     padding: 2rem 1rem;
