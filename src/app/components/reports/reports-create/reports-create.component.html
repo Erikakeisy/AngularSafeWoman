@@ -70,7 +70,7 @@
           [(ngModel)] = "reports.date"
           name="date"
           matInput placeholder="Ex: dd/MM/aaaa">
-          <mat-icon matSuffix>watch_later</mat-icon>
+          <mat-icon matSuffix>calendar_today</mat-icon>
         </mat-form-field>
       </p>
 
@@ -109,6 +109,18 @@
           required 
           matInput placeholder="Ex: Rua, Shopping, Restaurante">
           <mat-icon matSuffix>pin_drop</mat-icon>
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field class="fullwidth"appearance="legacy">
+          <mat-label>Horario do Ocorrido</mat-label>
+          <input 
+          [(ngModel)] = "reports.hour"
+          name="hour"
+          required 
+          matInput placeholder="Ex:13:00">
+          <mat-icon matSuffix>watch_later</mat-icon>
         </mat-form-field>
       </p>
 

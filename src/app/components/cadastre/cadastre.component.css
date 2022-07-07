@@ -1,6 +1,6 @@
 .container{
     height: 190%;
-    background:rgb(173, 78, 129) ;
+    background-image:url(https://i.imgur.com/kscSzP3.jpg);
     display: flex;
     align-items: center ;
     justify-content: center;
@@ -15,11 +15,17 @@
 .full-width{
     width: 100%;
 }
+.img2{
+    height: 6rem;
+    width:50%;
+    margin: 0rem 12rem 0rem 12rem;
+
+}
 img{
     height: 8rem;
-    width: 27%;
+    width: 20%;
     border-radius: 3rem;
-    margin: 1rem 17rem 1rem 17rem;
+    margin: 1rem 18rem 1rem 18rem;
 }
 h1{
     width: 100%;
