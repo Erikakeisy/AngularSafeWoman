@@ -28,6 +28,7 @@ export class ReportsCreateComponent implements OnInit {
   policeSolved: '',
   suspectParticulars: '',
   observation: '',
+  userId:''
   }
 
   city: FormControl =  new FormControl(null, Validators.minLength(5));
@@ -55,6 +56,7 @@ export class ReportsCreateComponent implements OnInit {
   }
 
   create(): void{
+    this.reports.userId = localStorage.getItem('userId');
     this.service.create(this.reports).subscribe(resposta => {
     this.toast.success('Relato Criado!', 'Novo Relato');
     this.router.navigate(['relatos']);
