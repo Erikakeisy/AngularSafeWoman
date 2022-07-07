@@ -13,5 +13,6 @@ export interface reports{
     policeSolved: string;
     suspectParticulars: string;
     observation: string;
+    userId: any;
   
 }
