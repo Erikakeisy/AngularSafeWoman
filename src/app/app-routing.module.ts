@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth/auth.guard';
+import { CadastreComponent } from './components/cadastre/cadastre.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { MapComponent } from './components/map/map.component';
@@ -12,6 +13,7 @@ import { ReportsComponent } from './components/reports/reports.component';
 
 const routes: Routes = [
 {path: 'login', component: LoginComponent},
+{path: 'cadastro', component: CadastreComponent},
 {
   path: '', component: NavComponent, canActivate:[AuthGuard], children: [
     {path: 'home', component: HomeComponent},

@@ -1,0 +1,27 @@
+.container{
+    height: 190%;
+    background:rgb(173, 78, 129) ;
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+}
+.form{
+    width: 45rem;
+    margin: auto;
+    background-color: rgb(235,235,235);
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+}
+.full-width{
+    width: 100%;
+}
+img{
+    height: 8rem;
+    width: 27%;
+    border-radius: 3rem;
+    margin: 1rem 17rem 1rem 17rem;
+}
+h1{
+    width: 100%;
+    text-align: center;
+    }

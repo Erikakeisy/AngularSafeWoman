@@ -37,6 +37,7 @@ import { MyReportComponent } from './components/my-report/my-report.component';
 import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
 import { LoginComponent } from './components/login/login.component';
 import { ToastrModule } from 'ngx-toastr';
+import { CadastreComponent } from './components/cadastre/cadastre.component';
 
 
 
@@ -52,6 +53,7 @@ import { ToastrModule } from 'ngx-toastr';
     MapComponent,
     MyReportComponent,
     LoginComponent,
+    CadastreComponent,
   
   ],
   imports: [
