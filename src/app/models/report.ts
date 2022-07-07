@@ -1,17 +1,18 @@
 export interface reports{
-    name: string;
-    date: any;
+    openingDate:any;
     city: string;
     state: string;
     street: string;
     neighborhood: string;
     hour: any;
-    dateOffense: string;
+    date: string;
     offenseType: string;
     alone: string;
+    offenseLocation: string,
     policeReport: string;
     policeSolved: string;
     suspectParticulars: string;
     observation: string;
+    // userId: any;
   
 }

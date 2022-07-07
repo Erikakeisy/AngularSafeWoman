@@ -3,6 +3,8 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Data } from '@angular/router';
+import { reports } from 'src/app/models/report';
+import { ReportsService } from 'src/app/services/reports.service';
 
 @Component({
   selector: 'app-reports',
@@ -11,48 +13,31 @@ import { Data } from '@angular/router';
 })
 export class ReportsComponent implements OnInit {
 
-  displayedColumns: string[] = ['date', 'city', 'state','street','neighborhood','hour','dateOffense','offenseType','alone','policeReport','policeSolved','suspectParticulars','observation'];
-  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+  ELEMENT_DATA: reports [] = []
 
-  constructor(
+  displayedColumns: string[] = ['date', 'city', 'state','street','neighborhood','hour','openingDate','offenseType','alone','policeReport','policeSolved','suspectParticulars','observation','offenseLocation'];
+  dataSource = new MatTableDataSource<reports>(this.ELEMENT_DATA);
+
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+
+  constructor( private service: ReportsService
   ) { }
 
   ngOnInit(): void {
+    this.findAll();
   }
 
-  applyFilter(event: Event) {
+  findAll(){
+    this.service.findAll().subscribe(resposta =>{
+     this.ELEMENT_DATA = resposta
+     this.dataSource = new MatTableDataSource<reports>(this.ELEMENT_DATA);
+    })
+  }
+
+  applyFilter(event: Event){
     const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
+    this.dataSource.filter=filterValue.trim().toLowerCase();
   }
   
-  @ViewChild(MatPaginator) paginator: MatPaginator;
+}
  
-  ngAfterViewInit(){
-    this.dataSource.paginator= this.paginator;
-  }
-
-}
-
-export interface PeriodicElement {
-  // name: string;
-  date: any;
-  city: string;
-  state: string;
-  street: string;
-  neighborhood: string;
-  hour: any;
-  dateOffense: string;
-  offenseType: string;
-  alone: string;
-  policeReport: string;
-  policeSolved: string;
-  suspectParticulars: string;
-  observation: string;
-}
-
-/** Constants used to fill up our data base. */
-const ELEMENT_DATA: PeriodicElement [] = [
-  {date: '13/06/2022', city: 'Curitiba', state: 'PR', street:'Rua Leonardo Poli',neighborhood:'xaxim',hour:'13:30',dateOffense:'11/06/2022',offenseType:'Assedio',alone:'SIM',policeReport:'NAO',policeSolved:'N/A',suspectParticulars:'Idoso com camisa xadrez',observation:'Esse senhor sempre fica no bar dessa rua'},
-  {date: '13/06/2022', city: 'Curitiba', state: 'PR', street:'Rua Leonardo Poli',neighborhood:'xaxim',hour:'13:30',dateOffense:'11/06/2022',offenseType:'Agressao',alone:'SIM',policeReport:'NAO',policeSolved:'N/A',suspectParticulars:'Idoso com camisa xadrez',observation:'Esse senhor sempre fica no bar dessa rua'}
-
-];

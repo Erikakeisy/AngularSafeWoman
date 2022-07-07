@@ -2,11 +2,21 @@
     <form action="" class="form">
         <h1 class="fullwidth">Criar Relato</h1>
         <!-- <img class="fullwidth" src="assets/img/Component 1.png" alt=""> -->
-   
+        <!-- <mat-form-field class="fullwidth" appearance="fill">
+          <mat-label>Perfil</mat-label>
+          <mat-select        
+          [(ngModel)] = "reports.userId"
+          name="userId"
+          required>
+            <mat-option value="one">1</mat-option>
+          </mat-select>
+        </mat-form-field> -->
     <p>
         <mat-form-field class="fullwidth"appearance="legacy">
           <mat-label>Cidade</mat-label>
           <input 
+          [(ngModel)] = "reports.city"
+          name="city"
           [formControl]="city"
           required
           matInput placeholder="Cidade">
@@ -18,6 +28,8 @@
         <mat-form-field class="fullwidth"appearance="legacy">
           <mat-label>Estado</mat-label>
           <input
+          [(ngModel)] = "reports.state"
+          name="state"
           [formControl]="state"
           required
           matInput placeholder="Estado">
@@ -29,6 +41,8 @@
         <mat-form-field class="fullwidth"appearance="legacy">
           <mat-label>Rua</mat-label>
           <input
+          [(ngModel)] = "reports.street"
+          name="street"
           [formControl]="street"
           required 
           matInput placeholder="Rua">
@@ -40,18 +54,22 @@
         <mat-form-field class="fullwidth"appearance="legacy">
           <mat-label>Bairro</mat-label>
           <input
-          [formControl]="street"
+          [(ngModel)] = "reports.neighborhood"
+          name="neighborhood"
+          [formControl]="neighborhood"
           required 
-          matInput placeholder="neighborhood">
+          matInput placeholder="Centro">
           <mat-icon matSuffix>location_on</mat-icon>
         </mat-form-field>
       </p>
 
       <p>
         <mat-form-field class="fullwidth"appearance="legacy">
-          <mat-label>Horario</mat-label>
+          <mat-label>Data do Ocorrido</mat-label>
           <input
-          matInput placeholder="Ex: 13:30">
+          [(ngModel)] = "reports.date"
+          name="date"
+          matInput placeholder="Ex: dd/MM/aaaa">
           <mat-icon matSuffix>watch_later</mat-icon>
         </mat-form-field>
       </p>
@@ -60,6 +78,8 @@
         <mat-form-field class="fullwidth"appearance="legacy">
           <mat-label>Tipo de Ofensa</mat-label>
           <input
+          [(ngModel)] = "reports.offenseType"
+          name="offenseType"
           [formControl]="offenseType"
           required 
           matInput placeholder="Ex:Assedio, Agressao, Roubo...">
@@ -67,31 +87,50 @@
         </mat-form-field>
       </p>
 
+
+      <mat-form-field class="fullwidth" appearance="fill">
+        <mat-label>Estava Sozinha?</mat-label>
+        <mat-select       
+        [(ngModel)] = "reports.alone"
+        name="alone"
+        required>
+        <mat-option value="one">Sim</mat-option>
+        <mat-option value="two">Nao</mat-option>
+        </mat-select>
+      </mat-form-field>
+
       <p>
         <mat-form-field class="fullwidth"appearance="legacy">
-          <mat-label>Estava Sozinha?</mat-label>
+          <mat-label>Local do Ocorrido</mat-label>
           <input
-          [formControl]="alone"
+          [(ngModel)] = "reports.offenseLocation"
+          name="offenseLocation"
+          [formControl]="offenseLocation"
           required 
-          matInput placeholder="Ex:Nao, estava com minha amiga">
-          <mat-icon matSuffix>supervisor_account</mat-icon>
+          matInput placeholder="Ex: Rua, Shopping, Restaurante">
+          <mat-icon matSuffix>pin_drop</mat-icon>
         </mat-form-field>
       </p>
 
       <mat-form-field class="fullwidth" appearance="fill">
         <mat-label>Foi chamado a policia?</mat-label>
-        <mat-select>
+        <mat-select
+        [(ngModel)] = "reports.policeReport"
+        name="policeReport"
+        required>
           <mat-option value="one">Sim</mat-option>
           <mat-option value="two">Nao</mat-option>
         </mat-select>
       </mat-form-field>
 
       <mat-form-field class="fullwidth" appearance="fill">
-        <mat-label>Se sim, fooi resolvido?</mat-label>
-        <mat-select>
+        <mat-label>Se sim, foi resolvido?</mat-label>
+        <mat-select        
+        [(ngModel)] = "reports.policeSolved"
+        name="policeSolved"
+        required>
           <mat-option value="one">Sim</mat-option>
           <mat-option value="two">Nao</mat-option>
-          <mat-option value="two">Nao foi chamado</mat-option>
         </mat-select>
       </mat-form-field>
 
@@ -99,6 +138,8 @@
         <mat-form-field class="fullwidth"appearance="legacy">
           <mat-label>Detalhe do suspeito</mat-label>
           <input 
+          [(ngModel)] = "reports.suspectParticulars"
+          name="suspectParticulars"
           [formControl]="suspectParticulars"
           required 
           matInput placeholder="Detalhe do suspeito">
@@ -109,12 +150,14 @@
       <p>
       <mat-form-field class="fullwidth" appearance="fill">
         <mat-label>Observações</mat-label>
-        <textarea matInput></textarea>
-        <mat-hint>Ex:Sempre vejo esse senhor no bar dessa rua</mat-hint>
+        <textarea matInput
+        [(ngModel)] = "reports.observation"
+        name="observation"></textarea>
+        <mat-hint>Ex:Sempre vejo esse senhor no bar dessa rua  -  foi no uber a placa do carro e AAAA-9090</mat-hint>
       </mat-form-field>
     </p>
 
-    <button [disabled]="!validate()" class="button1 mat-elevation-z4" mat-flat-button color="primary">Criar</button>
+    <button (click) ="create()" [disabled]="!validate()" class="button1 mat-elevation-z4" mat-flat-button color="primary">Criar</button>
     <button routerLink="../" class="button2 mat-elevation-z4" mat-stroked-button color="primary">Cancelar</button>
 </form>
 </div>

@@ -1,19 +1,21 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { API_CONFIG } from '../config/api.config';
+import { reports } from '../models/report';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ReportsService {
 
-  constructor(http: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  // findAll(){
-  //   return this.http.get('$')
-  // }
+  findAll(): Observable<reports[]>{
+    return this.http.get<reports[]>(`${API_CONFIG.baseUrl}/safewoman/report/findAll`)
+  }
 
-  // create(report: ReportsService): Observable<ReportsService>{
-  // return this.http.post<ReportsService[]>(`${API_CONFIG.baseUrl}/reports`, report);
-  // }
+  create(reports: reports): Observable<reports>{
+    return this.http.post<reports>(`${API_CONFIG.baseUrl}/safewoman/report/create`, reports);
+  }
 }

@@ -4,6 +4,7 @@
 
   <!-- <button routerLink="criar" class="mat-elevation-z8" mat-stroked-button color="primary">Novo Relato</button> -->
   <button routerLink="criar" class="button1 mat-elevation-z8" mat-flat-button color="primary">Novo Relato</button>
+
   <mat-form-field appearance="standard">
      <mat-label>Filtre por alguma palavra chave!</mat-label>
      <input matInput (keyup)="applyFilter($event)" placeholder="Ex:Assedio, Curitiba" #input>
@@ -12,78 +13,76 @@
       <div class="mat-elevation-z8">
         <table mat-table [dataSource]="dataSource" matSort>
       
-          <!-- ID Column -->
-          <!-- <ng-container matColumnDef="name"> -->
-            <!-- <th mat-header-cell *matHeaderCellDef mat-sort-header> Nome </th>
-            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-          </ng-container> -->
-      
-          <!-- Progress Column -->
-          <ng-container matColumnDef="date">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> Data de Abertura </th>
-            <td mat-cell *matCellDef="let element"> {{element.date}}% </td>
+          <ng-container matColumnDef="openingDate">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header  class="type2"> Data de Abertura </th>
+            <td mat-cell *matCellDef="let element"  class="type"> {{element.openingDate}} </td>
           </ng-container>
       
           <!-- Name Column -->
           <ng-container matColumnDef="city">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> Cidade </th>
-            <td mat-cell *matCellDef="let element"> {{element.city}} </td>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header  class="type2"> Cidade </th>
+            <td mat-cell *matCellDef="let element" class="type"> {{element.city}} </td>
           </ng-container>
       
           <!-- Fruit Column -->
           <ng-container matColumnDef="state">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> Estado </th>
-            <td mat-cell *matCellDef="let element"> {{element.state}} </td>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header  class="type2"> Estado </th>
+            <td mat-cell *matCellDef="let element" class="type"> {{element.state}} </td>
           </ng-container>
 
           <ng-container matColumnDef="street">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> Rua </th>
-            <td mat-cell *matCellDef="let element"> {{element.street}} </td>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header  class="type2"> Rua </th>
+            <td mat-cell *matCellDef="let element" class="type"> {{element.street}} </td>
           </ng-container>
 
           <ng-container matColumnDef="neighborhood">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> Bairro </th>
-            <td mat-cell *matCellDef="let element"> {{element.neighborhood}} </td>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header  class="type2"> Bairro </th>
+            <td mat-cell *matCellDef="let element" class="type"> {{element.neighborhood}} </td>
           </ng-container>
 
           <ng-container matColumnDef="hour">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> Horario </th>
-            <td mat-cell *matCellDef="let element"> {{element.hour}} </td>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header  class="type2"> Horario </th>
+            <td mat-cell *matCellDef="let element" class="type"> {{element.hour}} </td>
           </ng-container>
 
-          <ng-container matColumnDef="dateOffense">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> Data </th>
-            <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+          <ng-container matColumnDef="date">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header  class="type2"> Data </th>
+            <td mat-cell *matCellDef="let element" class="type"> {{element.date}} </td>
           </ng-container>
 
           <ng-container matColumnDef="offenseType">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> Tipo de Ofensa </th>
-            <td mat-cell *matCellDef="let element"> {{element.offenseType}} </td>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header  class="type2"> Tipo de Ofensa </th>
+            <td mat-cell *matCellDef="let element" class="type"> {{element.offenseType}} </td>
           </ng-container>
 
           <ng-container matColumnDef="alone">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> Estava Sozinha </th>
-            <td mat-cell *matCellDef="let element"> {{element.alone}} </td>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header  class="type2"> Estava Sozinha </th>
+            <td mat-cell *matCellDef="let element" class="type"> {{element.alone}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="offenseLocation">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header  class="type2"> Local da Ofensa </th>
+            <td mat-cell *matCellDef="let element" class="type"> {{element.offenseLocation}} </td>
           </ng-container>
 
           <ng-container matColumnDef="policeReport">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> Foi chamado a policia </th>
-            <td mat-cell *matCellDef="let element"> {{element.policeReport}} </td>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header  class="type2"> Foi chamado a policia </th>
+            <td mat-cell *matCellDef="let element" class="type"> {{element.policeReport}} </td>
           </ng-container>
 
           <ng-container matColumnDef="policeSolved">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> Se sim, foi resolvido </th>
-            <td mat-cell *matCellDef="let element"> {{element.policeSolved}} </td>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header  class="type2"> Se sim, foi resolvido? </th>
+            <td mat-cell *matCellDef="let element" class="type"> {{element.policeSolved}} </td>
           </ng-container>
 
           <ng-container matColumnDef="suspectParticulars">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> Detalhes do Suspeito </th>
-            <td mat-cell *matCellDef="let element"> {{element.suspectParticulars}} </td>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header  class="type2"> Detalhes do Suspeito </th>
+            <td mat-cell *matCellDef="let element" class="type"> {{element.suspectParticulars}} </td>
           </ng-container>
 
           <ng-container matColumnDef="observation">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> Observações </th>
-            <td mat-cell *matCellDef="let element"> {{element.observation}} </td>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header class="type2"> Observações </th>
+            <td mat-cell *matCellDef="let element" class="type"> {{element.observation}} </td>
           </ng-container>
 
           <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

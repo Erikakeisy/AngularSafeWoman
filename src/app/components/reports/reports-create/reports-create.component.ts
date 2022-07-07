@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { reports } from 'src/app/models/report';
 import { ReportsService } from 'src/app/services/reports.service';
 
@@ -10,7 +12,24 @@ import { ReportsService } from 'src/app/services/reports.service';
 })
 export class ReportsCreateComponent implements OnInit {
 
-  report: reports[] = []
+
+ reports: reports = {
+  openingDate:'',
+  city: '',
+  state: '',
+  street: '',
+  neighborhood: '',
+  hour: '',
+  date: '',
+  offenseType: '',
+  alone: '',
+  offenseLocation: '',
+  policeReport: '',
+  policeSolved: '',
+  suspectParticulars: '',
+  observation: '',
+  // userId:'',
+  }
 
   city: FormControl =  new FormControl(null, Validators.minLength(5));
   state: FormControl =  new FormControl(null, Validators.minLength(2));
@@ -24,31 +43,35 @@ export class ReportsCreateComponent implements OnInit {
   // policeSolved: FormControl =  new FormControl(null, Validators.minLength(3));
   suspectParticulars: FormControl =  new FormControl(null, Validators.minLength(7));
   // observation :FormControl =  new FormControl(null, Validators.minLength(7));
+  offenseLocation: FormControl = new FormControl(null,Validators.minLength(3));
+  // userId: FormControl = new FormControl(null,Validators.minLength(3));
   
   constructor(
-    private ReportService: ReportsService
+    private service: ReportsService,
+    private toast: ToastrService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
   }
    
-  // findAllReports(): void{
-  //   this.ReportService.findAll().subscribe(resposta ->
-  //     {this.reports = Response;
-  //     })
-  // }
-
   validate(): boolean{
     return this.city.valid && this.state.valid && this.street.valid && this.neighborhood.valid &&  
     this.offenseType.valid && this.alone.valid && this.suspectParticulars.valid 
 
   }
 
-  // create():void{
-  //   this.service.create(this.report).subscribe(respost);
-  // }
-  
+  create(): void{
+    this.service.create(this.reports).subscribe(resposta => {
+    this.toast.success('Relato Criado!', 'Novo Relato');
+    this.router.navigate(['relatos']);
+    }, ex => {
+      console.log(ex);
+      this.toast.error(ex.error.error);
+    })
+  }
+
+ 
 }
 
-// return this.city.valid && this.state.valid && this.street.valid && this.neighborhood.valid && this.hour.valid && this.dateOffense.valid 
-// && this.offenseType.valid && this.alone.valid && this.policeReport.valid && this.policeSolved.valid && this.suspectParticulars.valid && this.observation.valid
+

@@ -34,3 +34,12 @@ table{
    background-color:  rgb(173, 78, 129); ;
    
 }
+.type{
+   color: rgb(240, 239, 239);
+   font-weight: normal;
+}
+.type2{
+   color: rgb(34, 32, 32);
+   font-weight: bold;
+   font-size: 13px;
+}
