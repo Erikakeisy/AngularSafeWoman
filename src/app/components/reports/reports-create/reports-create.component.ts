@@ -28,23 +28,16 @@ export class ReportsCreateComponent implements OnInit {
   policeSolved: '',
   suspectParticulars: '',
   observation: '',
-  // userId:'',
   }
 
   city: FormControl =  new FormControl(null, Validators.minLength(5));
   state: FormControl =  new FormControl(null, Validators.minLength(2));
   street: FormControl =  new FormControl(null, Validators.minLength(5));
   neighborhood: FormControl =  new FormControl(null, Validators.minLength(5));
-  // hour: FormControl =       new FormControl(null, Validators.maxLength(3));
-  // dateOffense: FormControl =  new FormControl(null, Validators.minLength(8));
   offenseType: FormControl =  new FormControl(null, Validators.minLength(5));
   alone: FormControl =  new FormControl(null, Validators.minLength(3));
-  // policeReport: FormControl =  new FormControl(null, Validators.minLength(3));
-  // policeSolved: FormControl =  new FormControl(null, Validators.minLength(3));
   suspectParticulars: FormControl =  new FormControl(null, Validators.minLength(7));
-  // observation :FormControl =  new FormControl(null, Validators.minLength(7));
   offenseLocation: FormControl = new FormControl(null,Validators.minLength(3));
-  // userId: FormControl = new FormControl(null,Validators.minLength(3));
   
   constructor(
     private service: ReportsService,

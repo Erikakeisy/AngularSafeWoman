@@ -60,12 +60,9 @@ import { CadastreComponent } from './components/cadastre/cadastre.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    // Forms
     FormsModule,
     ReactiveFormsModule,
-    // Requisições http
     HttpClientModule,
-    // Angular Material
     MatFormFieldModule,
     MatPaginatorModule,
     MatCheckboxModule,
