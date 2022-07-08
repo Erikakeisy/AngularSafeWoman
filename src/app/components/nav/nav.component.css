@@ -9,9 +9,8 @@
 
 }
 img{
-    width: 40%;
-    height: 5rem;
-    margin: .8rem 4rem 1rem 4rem;
+    width: 30%;
+    margin: .3rem 4rem 1rem 4rem;
 }
 .sidenav a {
 color: white;
@@ -21,13 +20,27 @@ color: white;
  }
 .menu{
     margin: 10px 30px;
-
     color: white;
     background: rgb(228, 76, 146);
 
 }
 div.toolbar{
+    background:  rgb(161, 159, 159);
     display: flex;
     align-items: center;
     background: (65, 55, 59, 53%);
 }
+
+.itens{
+    display: flex;
+    list-style: none;
+    gap:50px;
+    
+}
+.itens a {
+    text-decoration: none;
+    color: white;
+    padding: 0.4rem;
+    font-size: 17px;
+    
+ }

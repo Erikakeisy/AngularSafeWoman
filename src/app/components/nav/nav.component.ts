@@ -15,7 +15,7 @@ export class NavComponent implements OnInit {
     private toast: ToastrService) { }
 
   ngOnInit(): void {
-    this.router.navigate(['home']) // colocar para cadastro a rota
+    this.router.navigate(['login']) // colocar para cadastro a rota
   }
    
   logout(){

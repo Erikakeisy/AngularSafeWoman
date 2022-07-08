@@ -42,18 +42,20 @@
       <button class="menu mat-elevation-z8" (click)="drawer.toggle()" mat-icon-button>
         <mat-icon>menu</mat-icon>
       </button>
-      <a mat-list-item href="/src/app/components/home/home.component.html">
+      <ul class="itens">
+      <a mat-list-item href="http://localhost:4200/home">
           Início
       </a>
       <a mat-list-item routerLink="a">
         Quem somos
       </a> 
-      <a mat-list-item routerLink="">
+      <a mat-list-item href="http://localhost:4200/cadastro">
         Cadastre-se
       </a>
       <a mat-list-item href="https://linktr.ee/safewoman">
         Redes sociais
       </a>   
+    </ul>
     </div>
       <router-outlet></router-outlet>
     </div>
