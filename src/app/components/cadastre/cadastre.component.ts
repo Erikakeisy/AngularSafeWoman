@@ -54,4 +54,8 @@ export class CadastreComponent implements OnInit {
       this.toast.error(ex.error.error);
     })
   }
+
+  login(): void{
+  this.router.navigate(['login'])
+  }
 }

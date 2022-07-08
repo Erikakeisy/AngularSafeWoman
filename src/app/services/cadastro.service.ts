@@ -17,4 +17,8 @@ import { Cadastro } from "../models/cadastro";
   create(cadastro: Cadastro): Observable<Cadastro>{
     return this.http.post<Cadastro>(`${API_CONFIG.baseUrl}/safewoman/user/create`, cadastro);
   }
+
+  findAll(): Observable<Cadastro[]>{
+    return this.http.get<Cadastro[]>(`${API_CONFIG.baseUrl}/safewoman/report/findAll`)
+  }
   }

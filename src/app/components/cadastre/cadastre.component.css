@@ -1,6 +1,7 @@
 .container{
-    height: 190%;
-    background:rgb(228, 76, 146) ;
+    height: 200%;
+    /* background-image:url(https://i.imgur.com/kscSzP3.jpg); */
+    background: rgb(228, 76, 146); ;
     display: flex;
     align-items: center ;
     justify-content: center;
@@ -31,3 +32,15 @@ h1{
     width: 100%;
     text-align: center;
     }
+
+.button1{
+    background-color:  rgb(228, 76, 146) ;
+    width: 100%;
+}
+.button2{
+  margin: 0.5rem 0rem 0.5rem 0rem;
+  background-color:  rgb(142, 126, 134); ;
+  width: 100%;
+}
+    
+    

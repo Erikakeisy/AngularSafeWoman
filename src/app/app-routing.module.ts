@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth/auth.guard';
+import { AccountComponent } from './components/account/account.component';
 import { CadastreComponent } from './components/cadastre/cadastre.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
@@ -23,6 +24,7 @@ const routes: Routes = [
     {path: 'mapa', component: MapComponent},
     {path: 'meusrelatos', component: MyReportComponent},
     {path: 'meusrelatos/criar', component: ReportsCreateComponent},
+    {path: 'minhaconta', component: AccountComponent}
   ]
 }
 ];

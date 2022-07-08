@@ -43,4 +43,8 @@ export class LoginComponent implements OnInit {
     return this.email.valid && this.password.valid
   }
 
+  cadastro(): void{
+    this.router.navigate(['cadastro'])
+  }
+
 }
