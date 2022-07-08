@@ -1,6 +1,6 @@
 <mat-drawer-container class="container" autosize>
     <mat-drawer #drawer class="sidenav" mode="side">
-      <img src="assets/img/Component 1.png" alt="Imagem Navegação">
+      <img src="assets/img/short-logo.png" alt="Imagem Navegação">
         <mat-nav-list class="nav-list">
             <a mat-list-item routerLink="home">
                 <i class="material-icons">home</i>
@@ -14,10 +14,6 @@
               <i class="material-icons">record_voice_over</i>
               Meus Relatos
             </a>
-            <!-- <a mat-list-item routerLink="/">
-              <i class="material-icons">report_problem</i>
-              Alertas
-            </a> -->
             <a mat-list-item routerLink="telefones">
               <i class="material-icons">settings_phone</i>
               Telefones
@@ -40,13 +36,25 @@
             </a>
         </mat-nav-list>
     </mat-drawer>
-  
     <div class="sidenav-content">
       <app-headers></app-headers>
+      <div class="toolbar">
       <button class="menu mat-elevation-z8" (click)="drawer.toggle()" mat-icon-button>
         <mat-icon>menu</mat-icon>
       </button>
+      <a mat-list-item href="/src/app/components/home/home.component.html">
+          Início
+      </a>
+      <a mat-list-item routerLink="a">
+        Quem somos
+      </a> 
+      <a mat-list-item routerLink="">
+        Cadastre-se
+      </a>
+      <a mat-list-item href="https://linktr.ee/safewoman">
+        Redes sociais
+      </a>   
+    </div>
       <router-outlet></router-outlet>
     </div>
-  
   </mat-drawer-container>

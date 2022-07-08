@@ -1,7 +1,6 @@
 .container{
     height: 190%;
-    /* background-image:url(https://i.imgur.com/kscSzP3.jpg); */
-    background:rgb(173, 78, 129) ;
+    background:rgb(228, 76, 146) ;
     display: flex;
     align-items: center ;
     justify-content: center;
@@ -9,7 +8,7 @@
 .form{
     width: 40rem;
     margin: auto;
-    background-color: rgb(235,235,235);
+    background-color: rgb(255, 255, 255);
     padding: 2rem 1rem;
     border-radius: 1rem;
 }
