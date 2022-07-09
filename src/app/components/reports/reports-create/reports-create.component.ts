@@ -58,6 +58,7 @@ export class ReportsCreateComponent implements OnInit {
   create(): void{
     this.reports.userId = localStorage.getItem('userId');
     this.service.create(this.reports).subscribe(resposta => {
+    localStorage.setItem('userId', resposta.userId)
     this.toast.success('Relato Criado!', 'Novo Relato');
     this.router.navigate(['relatos']);
     }, ex => {

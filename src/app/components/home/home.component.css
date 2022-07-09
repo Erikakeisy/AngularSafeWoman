@@ -7,8 +7,8 @@ height: 30rem;
 }
 .retangle-left{
     position: absolute;
-    width: 800px;
-    height: 950px;
+    width: 700px;
+    height: 823px;
     left: 385px;
     top: 100px;
     border-radius: 53px 0px 0px 0px;
@@ -16,12 +16,11 @@ height: 30rem;
 }
 .retangle-right{
     position: absolute;
-    width: 1200px;
+    width: 1000px;
     height: 1000px;
     left: 1100px;
     top: 100px;
     background: #FFFFFF;
-    
 }
 .text{
 position: absolute;
@@ -70,11 +69,11 @@ color: #000000;
     height: 8px;
     left: 63px;
     top: 130px;
-    
+
     background: #EA116B;
 }
 .page{
-    background: rgb(250,250,250)
+    background: white;
 }
 .why{
     position: absolute;
