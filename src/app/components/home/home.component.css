@@ -8,20 +8,20 @@ height: 30rem;
 }
 .retangle-left{
     position: absolute;
-    width: 579px;
+    width: 700px;
     height: 823px;
-    left: 229px;
-    top: 201px;
+    left: 385px;
+    top: 100px;
     
     border-radius: 53px 0px 0px 0px;
-    background:  rgba(234, 17, 107, 1);
+    background:  url("src\assets\img\safewomanimage.png");
 }
 .retangle-right{
     position: absolute;
     width: 632px;
-    height: 820px;
-    left: 808px;
-    top: 204px;
+    height: 823spx;
+    left: 1000px;
+    top: 100px;
     
     background: #FFFFFF;
     
