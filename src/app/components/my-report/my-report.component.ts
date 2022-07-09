@@ -48,6 +48,4 @@ export interface PeriodicElement {
 /** Constants used to fill up our data base. */
 const ELEMENT_DATA: PeriodicElement [] = [
   {date: '13/06/2022', city: 'Curitiba', state: 'PR', street:'Rua Leonardo Poli',neighborhood:'xaxim',hour:'13:30',dateOffense:'11/06/2022',offenseType:'Assedio',alone:'SIM',policeReport:'NAO',policeSolved:'N/A',suspectParticulars:'Idoso com camisa xadrez',observation:'Esse senhor sempre fica no bar dessa rua'},
-  {date: '13/06/2022', city: 'Curitiba', state: 'PR', street:'Rua Leonardo Poli',neighborhood:'xaxim',hour:'13:30',dateOffense:'11/06/2022',offenseType:'Agressao',alone:'SIM',policeReport:'NAO',policeSolved:'N/A',suspectParticulars:'Idoso com camisa xadrez',observation:'Esse senhor sempre fica no bar dessa rua'}
-
 ];

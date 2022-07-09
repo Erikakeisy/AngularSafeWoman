@@ -1,6 +1,5 @@
 .card{
-    width: 80%;
-    width: 80%;
+    width: 100%;
     margin: 1rem auto;
 }
 img{
@@ -12,22 +11,20 @@ height: 30rem;
     height: 823px;
     left: 385px;
     top: 100px;
-    
     border-radius: 53px 0px 0px 0px;
     background:  url("src\assets\img\safewomanimage.png");
 }
 .retangle-right{
     position: absolute;
-    width: 632px;
-    height: 823spx;
-    left: 1000px;
+    width: 1000px;
+    height: 1000px;
+    left: 1100px;
     top: 100px;
-    
     background: #FFFFFF;
     
 }
 .text{
-    position: absolute;
+position: absolute;
 width: 573px;
 height: 546px;
 left: 63px;
@@ -53,7 +50,7 @@ color: #000000;
     background: #FFFFFF;
 }
 .retangle-right-title{
-    position: absolute;
+position: absolute;
 width: 234px;
 height: 89px;
 left: calc(50% - 234px/2 - 136px);
@@ -78,4 +75,29 @@ color: #000000;
 }
 .page{
     background: white;
+}
+.why{
+    position: absolute;
+    width: 632px;
+    height: 900px;
+    left: 700px;
+    top: 1000px; 
+}
+.imgQS{
+    background: url("src\assets\img\Quem Somos Yasmin.png");
+    position: absolute;
+    width: 1500px;
+    height:1100px;
+    left: 385px;
+    top: 1000px;
+    border-radius: 53px 0px 0px 0px;
+}
+.imgQS2{
+    background: url("src\assets\img\Quem Somos Erika.png");
+    position: absolute;
+    width: 1500px;
+    height: 1200px;
+    left: 385px;
+    top: 1990px;
+    border-radius: 53px 0px 0px 0px;
 }

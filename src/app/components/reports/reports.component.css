@@ -5,7 +5,7 @@
 table{
     width: 100%;
     text-align:center;
-    background-color: rgb(228, 76, 146);
+    background-color: rgb(228, 76, 146) ;
     color:white;
     font-size: 13px;
     font-weight: bold;
@@ -31,7 +31,7 @@ table{
     margin-bottom: 1rem;
  }
  .button1{
-   background-color:   rgb(228, 76, 146) ;
+   background-color:  rgb(228, 76, 146) ;
    
 }
 .type{
@@ -39,7 +39,7 @@ table{
    font-weight: normal;
 }
 .type2{
-   color: rgb(34, 32, 32);
+   color: rgb(0, 0, 0);
    font-weight: bold;
    font-size: 13px;
 }
